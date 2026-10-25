@@ -47,3 +47,123 @@
 // {
 //     Console.WriteLine("Пока нельзя");
 // } // задание 4
+
+// switch (day) {
+//     case 1:
+//         dayName = "Понедельник";
+//         break;
+//     case 2:
+//         dayName = "Вторник";
+//         break;
+//     default:
+//         dayName = "Другой день";
+//         break;
+// }
+
+
+// System.Console.WriteLine();
+// System.Console.WriteLine("задание А");
+
+// Console.Write("Введите число: ");
+// double chislo = double.Parse(Console.ReadLine());
+
+// if (chislo % 2 == 0)
+// {
+//     System.Console.WriteLine("Число четное");
+// }
+// else
+// {
+//     System.Console.WriteLine("Число не четное");
+// }
+
+// System.Console.WriteLine();
+// System.Console.WriteLine("Задание Б");
+
+
+// Console.Write("Введите число: ");
+// int chisloOne = int.Parse(Console.ReadLine());
+
+// if (chisloOne == 5)
+// {
+//     System.Console.WriteLine("Отлично");
+// }
+// else if (chisloOne == 4)
+// {
+//     System.Console.WriteLine("Хорошо");
+// }
+// else if (chisloOne == 3)
+// {
+//     System.Console.WriteLine("Удовлетворительно");
+// }
+// else if (chisloOne == 2)
+// {
+//     System.Console.WriteLine("Неудовлетворительно");
+// }
+// else
+// {
+//     System.Console.WriteLine("Вы ввели не правильное число");
+// }
+
+
+// Console.Write("Введите свою фамилию: ");
+// string surname = Console.ReadLine()!.Trim();
+
+// if (string.IsNullOrEmpty(surname)) {
+//     Console.WriteLine("Фамилия не введена. Завершение работы.");
+//     return;
+// }
+
+// Random rnd = new(surname.GetHashCode() + DateTime.Now.DayOfYear);
+
+// var assigned = Enumerable.Range(1, 10)
+//     .OrderBy(_ => rnd.Next())
+//     .Take(2)
+//     .OrderBy(x => x)
+//     .ToList();
+
+// Console.WriteLine($"Задачи: №{assigned[0]} и №{assigned[1]}");
+
+
+System.Console.WriteLine();
+System.Console.WriteLine("Задание 3");
+
+System.Console.Write("Введите месяц года: ");
+int mes = int.Parse(Console.ReadLine());
+
+string mess = mes switch
+{
+    12 or 1 or 2 => "зима",
+    3 or 4 or 5 => "весна",
+    6 or 7 or 8 => "лето",
+    9 or 10 or 11 => "осень",
+    _ => "Вы ввели не правильно "
+};
+System.Console.WriteLine(mess);
+
+
+System.Console.WriteLine();
+System.Console.WriteLine("Задание 6");
+
+Console.Write("Введите количество баллов: ");
+int balls = int.Parse(Console.ReadLine());
+
+if (balls >= 90 && balls <= 100)
+{
+    System.Console.WriteLine("Отлично");
+}
+else if (balls >= 75 && balls <= 89)
+{
+    System.Console.WriteLine("Хорошо");
+}
+else if (balls >= 60 && balls <= 74)
+{
+    System.Console.WriteLine("Удовлетворительно");
+}
+else if (balls < 60)
+{
+    System.Console.WriteLine("Неудовлетворительно");
+}
+else
+{
+    System.Console.WriteLine("Не верное значение");
+}
